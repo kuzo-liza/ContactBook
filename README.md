@@ -18,3 +18,4 @@ https://en.wikipedia.org/wiki/Minimum_viable_product
 ## Диаграмма последовательностей
 
 ## Диаграмма компонентов
+![alt tag](Reports/diagram_3.jpg)
