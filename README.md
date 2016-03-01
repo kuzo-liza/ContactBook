@@ -20,7 +20,7 @@
 ![alt tag](Reports/example.jpg)
 
 ## Минимально работоспособный продукт (Minimum viable product)
-https://en.wikipedia.org/wiki/Minimum_viable_product
+Программа должна выводить список контактов в консоль или файл.
 
 ## Диаграмма прецедентов использования
 ![alt tag](Reports/diagram_1.jpg)
