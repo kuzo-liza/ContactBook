@@ -29,4 +29,4 @@ https://en.wikipedia.org/wiki/Minimum_viable_product
 ![alt tag](Reports/diagram_2.jpg)
 
 ## Диаграмма компонентов
-![alt tag](Reports/diagram_3.png)
+![alt tag](Reports/diagram_3.jpg)
