@@ -1,0 +1,12 @@
+#ifndef CONTACT_BOOK_GLOBAL_H
+#define CONTACT_BOOK_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(CONTACT_BOOK_LIBRARY)
+#  define CONTACT_BOOKSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define CONTACT_BOOKSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // CONTACT_BOOK_GLOBAL_H
