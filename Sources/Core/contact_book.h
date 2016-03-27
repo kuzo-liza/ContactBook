@@ -8,7 +8,7 @@ class CONTACT_BOOKSHARED_EXPORT Contact_book
 
 public:
     Contact_book();
-    /**
+       /**
         * @brief считывание данных из файла
         */
        void scan();
