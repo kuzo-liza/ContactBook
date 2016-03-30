@@ -14,6 +14,6 @@ Contact_book::Contact_book(int numberOfContacts)
     }
 }
 
-Contact_book::createContact(){
+void Contact_book::createContact(){
 
 }

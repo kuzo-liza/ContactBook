@@ -7,7 +7,7 @@ class CONTACT_BOOKSHARED_EXPORT Contact_book
 {
 
 public:
-    Contact_book();
+    Contact_book(int numberOfContacts);
        /**
         * @brief считывание данных из файла
         */
@@ -36,6 +36,7 @@ public:
         * @brief удаление контакта
         */
        void deleteContact();
+       
 
 };
 
