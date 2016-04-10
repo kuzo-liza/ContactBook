@@ -1,19 +1,40 @@
 #ifndef CONSOLE_H
 #define CONSOLE_H
 
-#include <iostream>
+#include <string>
+#include <vector>
 #include <fstream>
+#include <iostream>
 using namespace std;
 
 
-class console
-{
+void showTheBook();
+void searchByName();
+
+class Contact{
 public:
-    console();
+    string name;
+    string surname;
+    string number;
+    int group;
 
-printContacts();
-printContactsInFile();
+    // копирующий конструктор
+   Contact(const Contact &value){
+        name = value.name;
+        surname = value.surname;
+        number = value.number;
+    }
 
+    Contact(){
+
+    }
+
+    const Contact &operator =(const Contact &value){
+        name = value.name;
+        surname = value.surname;
+        number = value.number;
+        return value;
+    }
 };
 
 #endif // CONSOLE_H

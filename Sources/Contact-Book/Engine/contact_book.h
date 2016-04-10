@@ -2,7 +2,10 @@
 #define CONTACT_BOOK_H
 
 #include "contact_book_global.h"
-
+#include <string>
+#include <vector>
+#include <fstream>
+#include <iostream>
 class CONTACT_BOOKSHARED_EXPORT Contact_book
 {
 
@@ -15,7 +18,7 @@ public:
        /**
         * @brief вывод данных в консоль или файл
         */
-       void show();
+       void showTheBook();
        /**
         * @brief сохранение внесенных изменений
         */
@@ -27,7 +30,7 @@ public:
        /**
         * @brief поиск контакта
         */
-       void search();
+       void searchByName();
        /**
         * @brief создание нового контакта
         */
@@ -36,6 +39,7 @@ public:
         * @brief удаление контакта
         */
        void deleteContact();
+
 
 };
 
