@@ -20,6 +20,10 @@ int main()
         searchByName();
         break;
 
+    default:
+            {
+                std::cout << "Wrong number. Input another number" << endl;
+            }
         return 0;
     }
 }

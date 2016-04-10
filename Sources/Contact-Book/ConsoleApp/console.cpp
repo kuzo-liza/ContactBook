@@ -39,10 +39,12 @@ while(true){
 while (true){
     cout << "Input the name" << endl;
     string name;
+    string surname;
     cin >> name;
     for (int i = 0; i < contactBook.size(); i++){
         if (contactBook[i].name == name){
-            cout << name << " " << contactBook[i].number << endl;
+            cout << name << " ";
+            cout << contactBook[i].surname << " " << contactBook[i].number << endl;
         }
     }
 }
