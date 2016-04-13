@@ -1,7 +1,5 @@
 #include "console.h"
 
-using namespace std;
-
 void showTheBook()
 {
     string line;
