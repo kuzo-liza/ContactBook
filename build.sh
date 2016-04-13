@@ -45,25 +45,25 @@ build_debug_version() {
 }
 
 make_report() {		
-
-if [ -e "doxygen.ini" ]; then
+cd Reports/doxygen
+if [ -e "doxygenconfig.ini" ]; then
 			doxygen --version
-			doxygen doxygen.ini
+			doxygen doxygenconfig.ini
 		else
 			echo "Doxygen failed"
-			echo "doxygen.ini does not exist"
+			echo "doxygenconfig.ini does not exist"
 		fi
 
-	cd Sources/Contact-Book/doxygen/latex
+	cd latex
 	if [ -e "Makefile" ]; then
 		make --version
 		make
 
-		cd ../../../..
+		cd ../../..
 	else
 		echo "Makefile does not exist"
 		echo "Report failure!"
-		cd ../..
+		cd ../../..
 		return 1
 	fi
 }
