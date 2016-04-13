@@ -2,11 +2,23 @@
 
 using namespace std;
 
-int main()
-{
+void menu(){
+
+    cout << "Back to menu" << endl;
+    int main();
+
+}
+
+
+int main(){
+
     int check;
+
     cout << "1 - Show the book" << endl;
     cout << "2 - Search a contact by the name" << endl;
+    cout << "3 - Bcak to menu" << endl;
+    cout << "4 - Exit" << endl;
+
     cout << "Input a number of program" << endl;
     cin >> check;
 
@@ -14,19 +26,24 @@ int main()
 
     case 1:
         showTheBook();
-        break;
+
 
     case 2:
         searchByName();
         break;
 
+    case 3:
+        break;
+
+
+    case 4:
+        break;
+
     default:
             {
-                std::cout << "Wrong number. Input another number" << endl;
+                cout << "Wrong number. Input another number" << endl;
             }
-        return 0;
     }
+ return 0;
+
 }
-
-
-

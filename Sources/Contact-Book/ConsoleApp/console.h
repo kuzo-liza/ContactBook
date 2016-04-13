@@ -10,6 +10,7 @@ using namespace std;
 
 void showTheBook();
 void searchByName();
+void menu();
 
 class Contact{
 public:
