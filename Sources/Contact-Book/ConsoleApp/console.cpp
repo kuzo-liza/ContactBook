@@ -20,23 +20,23 @@ void showTheBook()
 
 void searchByName()
 {
-fstream file("contacts.txt");
-vector <Contact> contactBook;
-while(true){
-    Contact object;
-    file >> object.name;
-    if (file.eof())
-        break;
-    file >> object.surname;
-    if (file.eof())
-        break;
-    file >> object.number;
-    if (file.eof())
-        break;
-    contactBook.push_back(object);
-}
+    fstream file("contacts.txt");
+    vector <Contact> contactBook;
+    while(true){
+        Contact object;
+        file >> object.name;
+        if (file.eof())
+            break;
+        file >> object.surname;
+        if (file.eof())
+            break;
+        file >> object.number;
+        if (file.eof())
+            break;
+        contactBook.push_back(object);
+    }
 
-while (true){
+//while (true){
     cout << "Input the name" << endl;
     string name;
     string surname;
@@ -46,6 +46,7 @@ while (true){
             cout << name << " ";
             cout << contactBook[i].surname << " " << contactBook[i].number << endl;
         }
+// else cout << "Wrong name. Try again" << endl;
     }
 }
-}
+//}

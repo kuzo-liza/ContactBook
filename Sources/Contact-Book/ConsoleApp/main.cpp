@@ -2,48 +2,45 @@
 
 using namespace std;
 
-void menu(){
-
-    cout << "Back to menu" << endl;
-    int main();
-
-}
-
-
 int main(){
 
     int check;
 
-    cout << "1 - Show the book" << endl;
-    cout << "2 - Search a contact by the name" << endl;
-    cout << "3 - Bcak to menu" << endl;
-    cout << "4 - Exit" << endl;
 
-    cout << "Input a number of program" << endl;
-    cin >> check;
+    while (true)
+    {
+        cout << "1 - Show the book" << endl;
+        cout << "2 - Search a contact by the name" << endl;
+        cout << "3 - Exit" << endl;
 
-    switch (check){
+//        cout << "4 - " << endl;
 
-    case 1:
-        showTheBook();
+        cout << "Input a number of program" << endl;
+        cin >> check;
+
+        switch (check){
+
+        case 1:
+            showTheBook();
+            break;
+
+        case 2:
+            searchByName();
+            break;
+
+        case 3:
+            exit(0);
+            break;
+
+        default:
+        {
+            cout << "Wrong number. Input another number" << endl;
+        }
+        }
 
 
-    case 2:
-        searchByName();
-        break;
-
-    case 3:
-        break;
-
-
-    case 4:
-        break;
-
-    default:
-            {
-                cout << "Wrong number. Input another number" << endl;
-            }
     }
- return 0;
+
+    return 0;
 
 }
