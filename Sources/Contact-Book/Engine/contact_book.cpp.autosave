@@ -10,25 +10,32 @@ ContactBook::ContactBook()
 
 int ContactBook::showTheBook()
 {
-    string line;
-    ifstream book ("contacts.txt");
+//    string line;
+//    ifstream book ("contacts.txt");
 
-    if (book.is_open())
-    {
+//    if (book.is_open())
+//    {
 
-       while (! book.eof() )
-        {
-            getline (book,line);
-            cout << line << endl;
+//       while (! book.eof() )
+//        {
+//            getline (book,line);
+//            cout << line << endl;
 
 
-        }
-        cout << sizeOfBook << endl;
-        book.close();
-    }
-    else cout << "Unable to open file";
-    return sizeOfBook;
+//        }
+//        cout << sizeOfBook << endl;
+//        book.close();
+//    }
+//    else cout << "Unable to open file";
+//    return sizeOfBook;
+    for (int i = 0; i < sizeOfBook; i++)
+        cout << contactBook[i].getName();
+    cout << contactBook[i].getSurname();
+    cout << contactBook[i].getNumber();
+    
+    
 }
+
 
 void ContactBook::searchByName()
 {
@@ -75,7 +82,7 @@ int ContactBook::createContact(int sizeOfBook){
     cout << "Input telephone number" << endl;
     cin >> tmpContact.number;
     contactBook.push_back(tmpContact);
-
+    sizeOfBook++;
 }
 
 void ContactBook::deleteContact(){

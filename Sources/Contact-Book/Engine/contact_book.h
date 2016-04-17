@@ -6,41 +6,23 @@
 #include <vector>
 #include <fstream>
 #include <iostream>
-class CONTACT_BOOKSHARED_EXPORT Contact_book
+#include "contact.h"
+#include <algorithm>
+
+class ContactBook
 {
 
 public:
-    Contact_book(int numberOfContacts);
-       /**
-        * @brief считывание данных из файла
-        */
-       void scan();
-       /**
-        * @brief вывод данных в консоль или файл
-        */
-       void showTheBook();
-       /**
-        * @brief сохранение внесенных изменений
-        */
-       void save();
-       /**
-        * @brief сортировка контактов по группам
-        */
-       void sort();
-       /**
-        * @brief поиск контакта
-        */
-       void searchByName();
-       /**
-        * @brief создание нового контакта
-        */
-       void createContact();
-       /**
-        * @brief удаление контакта
-        */
-       void deleteContact();
-
-
+    ContactBook();
+    int sizeOfBook = 0;
+    vector <Contact> contactBook;
+    int showTheBook();
+    void searchByName();
+    int createContact(int sizeOfBook);
+    void deleteContact();
+    int checkNumberOfContacts();
+    void fillInTheBook();
+    void sortContacts();
 };
 
 #endif // CONTACT_BOOK_H

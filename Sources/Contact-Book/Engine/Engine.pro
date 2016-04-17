@@ -12,11 +12,9 @@ TEMPLATE = lib
 DEFINES += ENGINE_LIBRARY
 
 SOURCES += contact_book.cpp \
-    main.cpp \
     contact.cpp
 
 HEADERS += contact_book.h\
-        contact_book_global.h \
     contact.h
 
 unix {
