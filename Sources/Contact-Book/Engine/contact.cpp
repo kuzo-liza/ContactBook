@@ -17,3 +17,15 @@ Contact::Contact(const Contact &value)
 //    number = value.number;
 //    return value;
 //}
+string Contact::getName()
+{
+    return name;
+}
+string Contact::getSurname()
+{
+    return surname;
+}
+string Contact::getNumber()
+{
+    return number;
+}
