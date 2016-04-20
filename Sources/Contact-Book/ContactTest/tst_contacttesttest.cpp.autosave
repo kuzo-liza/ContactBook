@@ -1,5 +1,7 @@
 #include <QString>
 #include <QtTest>
+#include "contact_book.h"
+#include "contact.h"
 
 class ContactTestTest : public QObject
 {
@@ -7,6 +9,17 @@ class ContactTestTest : public QObject
 
 public:
     ContactTestTest();
+    
+
+    int testshowTheBook();
+    int checkNumberOfContacts();
+
+    void deleteContact(int num);
+    void searchByName();
+    void createContact();
+    void fillInTheBook();
+    void sortContacts();
+    
 
 private Q_SLOTS:
     void testCase1();

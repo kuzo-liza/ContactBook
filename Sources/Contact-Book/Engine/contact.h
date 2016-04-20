@@ -12,7 +12,9 @@ using namespace std;
 
 class Contact
 {
+
 public:
+
     void setName(string name);
     void setSurname(string surname);
     void setNumber(string number);
@@ -24,9 +26,11 @@ public:
     string name;
     string surname;
     string number;
+
     int group;
 
     Contact();
+
     Contact(const Contact &value);
     //const &operator =(const Contact &value);
 };

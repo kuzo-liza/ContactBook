@@ -13,15 +13,12 @@ public:
     ContactBook();
     vector <Contact> contactBook;
 
-    int showTheBook();
     int checkNumberOfContacts();
-
     void deleteContact(int num);
-    void searchByName();
-    void createContact();
+    void searchByName(string name);
+    void createContact(string name, string surname, string number);
     void fillInTheBook();
     void sortContacts();
-
 };
 
 #endif // CONTACT_BOOK_H

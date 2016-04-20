@@ -8,55 +8,8 @@ ContactBook::ContactBook()
     fillInTheBook();
 }
 
-int ContactBook::showTheBook()
+void ContactBook::searchByName(string name)
 {
-
-//    string line;
-//    ifstream book ("contact.txt");
-//    if (book.is_open())
-//    {
-//       while (! book.eof() )
-//        {
-//            getline (book,line);
-//            cout << line << endl;
-//        }
-//        cout << sizeOfBook << endl;
-//        book.close();
-//    }
-//    else cout << "Unable to open file";
-//    return sizeOfBook;
-
-    for (int i = 0; i < sizeOfBook; i++)
-    {
-        cout << i << " ";
-        cout << contactBook[i].name << " ";
-        cout << contactBook[i].surname << " ";
-        cout << contactBook[i].number << endl;
-    }
-}
-
-void ContactBook::searchByName()
-{
-    fstream file("contact.txt");
-    while(true)
-    {
-        Contact object;
-        file >> object.name;
-        if (file.eof())
-            break;
-        file >> object.surname;
-        if (file.eof())
-            break;
-        file >> object.number;
-        if (file.eof())
-            break;
-        contactBook.push_back(object);
-    }
-
-    cout << "Input the name" << endl;
-    string name;
-    string surname;
-    cin >> name;
 
     for (int i = 0; i < contactBook.size(); i++)
     {
@@ -66,24 +19,18 @@ void ContactBook::searchByName()
             cout << contactBook[i].surname << " ";
             cout << contactBook[i].number << endl;
         }
-// else cout << "Wrong name. Try again" << endl;
+        // else cout << "Wrong name. Try again" << endl;
     }
 }
 
-void ContactBook::createContact()
+void ContactBook::createContact(string name, string surname, string number)
 {
-    Contact tmpContact;
+    Contact newContact;
+    newContact.setName(name);
+    newContact.setSurname(surname);
+    newContact.setNumber(number);
 
-    cout << "Input name" << endl;
-    cin >> tmpContact.name;
-
-    cout << "Input surname" << endl;
-    cin >> tmpContact.surname;
-
-    cout << "Input telephone number" << endl;
-    cin >> tmpContact.number;
-
-    contactBook.push_back(tmpContact);
+    contactBook.push_back(newContact);
     sizeOfBook++;
 }
 
@@ -105,6 +52,7 @@ int ContactBook::checkNumberOfContacts()
             getline (book,line);
             sizeOfBook++;
         }
+
         book.close();
     }
 
@@ -114,6 +62,7 @@ int ContactBook::checkNumberOfContacts()
 void ContactBook::fillInTheBook()
 {
     fstream file("contact.txt");
+
     for (int i = 0; i < sizeOfBook; i++)
     {
         file >> contactBook[i].name;
@@ -121,6 +70,7 @@ void ContactBook::fillInTheBook()
         file >> contactBook[i].number;
     }
 }
+
 
 //void ContactBook::sortContacts()
 //{

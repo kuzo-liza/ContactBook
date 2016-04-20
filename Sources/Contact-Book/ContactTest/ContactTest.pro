@@ -15,5 +15,6 @@ CONFIG   -= app_bundle
 TEMPLATE = app
 
 
-SOURCES += tst_contacttesttest.cpp
+SOURCES += \
+    tst_contacttest.cpp
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
