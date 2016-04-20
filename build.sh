@@ -83,6 +83,9 @@ zip_files() {
 		if [ -e "Reports/ContactBook.pdf" ]; then
 			cp Reports/Contact-Book.pdf $TITLE/ContactBook_v${BUILD_NUMBER}.pdf
 		fi
+		if [ -e "Reports/contact.txt" ]; then 
+			cp Reports/contact.txt $TITLE/contact.txt
+		fi
 		zip --version
 		zip $TITLE.zip $TITLE/*
 	else
