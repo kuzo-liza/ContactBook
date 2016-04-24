@@ -18,9 +18,6 @@ build_release_version() {
 	cd ../..	
 }
 
-  	cloc --version
-  	cloc --by-file --xml --out=../../report/clock_result
-  	qmake --version
 build_debug_version() {
 	cd Sources/Contact-Book
 	cloc --version
