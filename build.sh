@@ -18,25 +18,28 @@ build_release_version() {
 	cd ../..	
 }
 
+  	cloc --version
+  	cloc --by-file --xml --out=../../report/clock_result
+  	qmake --version
 build_debug_version() {
 	cd Sources/Contact-Book
 	cloc --version
 	cloc --by-file --xml --out=../../Reports/cloc_result *
 	qmake --version
-	qmake "QMAKE_CXXFLAGS+=-fprofile-arcs -ftest-coverage -fPIC -O0 -g --coverage" "LIBS+=-lgcov"
+	#qmake "QMAKE_CXXFLAGS+=-fprofile-arcs -ftest-coverage -fPIC -O0 -g --coverage" "LIBS+=-lgcov"
 	if [ -e "Makefile" ]; then
 		make --version
-		make
+		#make
 		#Test/tst_testcore -xml -o test_results || true
-		cppcheck --version
-		cppcheck --enable=all -v  --xml  * 2> ../../Reports/cppcheck_result
-		gcovr --version
-		gcovr -r . --xml --exclude='tst*' -o  ../../Reports/gcovr_result
+		#cppcheck --version
+		#cppcheck --enable=all -v  --xml  * 2> ../../Reports/cppcheck_result
+		#gcovr --version
+		#gcovr -r . --xml --exclude='tst*' -o  ../../Reports/gcovr_result
 		
 		#valgrind --version
 		#valgrind --leak-check=full --xml=yes --xml-file=/opt/tomcat/.jenkins/jobs/ContactBook/workspace/tst_testcore.%p.result /opt/tomcat/.jenkins/jobs/ContactBook/workspace/Sources/ContactBook/Test/tst_testcore || true
 
-		cd ../..
+		#cd ../..
 	else
 		echo "Makefile does not exist"
 		echo "Build debug version failure!"
