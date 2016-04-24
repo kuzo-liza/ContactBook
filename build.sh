@@ -34,7 +34,7 @@ build_debug_version() {
 		cppcheck --version
 		cppcheck --enable=all -v  --xml  * 2> ../../Reports/cppcheck_result
 		gcovr --version
-		#gcovr -r . --xml --exclude='tst*' -o  ../../Reports/gcovr_result
+		gcovr -r . --xml --exclude='tst*' -o  ../../Reports/gcovr_result
 		
 		#valgrind --version
 		#valgrind --leak-check=full --xml=yes --xml-file=/opt/tomcat/.jenkins/jobs/ContactBook/workspace/tst_testcore.%p.result /opt/tomcat/.jenkins/jobs/ContactBook/workspace/Sources/ContactBook/Test/tst_testcore || true
