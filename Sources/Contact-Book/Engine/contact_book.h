@@ -19,6 +19,8 @@ public:
     void createContact(string name, string surname, string number);
     void fillInTheBook();
     void sortContacts();
+    bool compareByName(const Contact& contact1, const Contact& contact2);
+    void sortByName();
 };
 
 #endif // CONTACT_BOOK_H

@@ -18,6 +18,7 @@ public:
     void searchByName();
     void newContact();
     void editContact(int num);
+    void sortInGroups(int group);
 };
 
 #endif // APPLICATION_H

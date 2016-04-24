@@ -147,3 +147,8 @@ void Application::editContact(int num)
     }
 
 }
+
+void sortInGroups(int group)
+{
+
+}

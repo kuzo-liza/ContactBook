@@ -2,7 +2,10 @@
 
 Contact::Contact()
 {
-
+    name = "";
+    surname = "";
+    number = "";
+    group = 0;
 }
 
 Contact::Contact(const Contact &value)

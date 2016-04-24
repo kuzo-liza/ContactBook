@@ -71,8 +71,17 @@ void ContactBook::fillInTheBook()
     }
 }
 
+bool ContactBook::compareByName(const Contact& contact1, const Contact& contact2)
+{
+    if (contact1.name == contact2.name)
+    {
+        return contact1.surname < contact2.surname;
+    }
+    return contact1.name < contact2.name;
+}
 
-//void ContactBook::sortContacts()
-//{
-//sort(contactBook.begin(), contactBook.end());
-//}
+void ContactBook::sortByName()
+{
+    //sort(contactBook.begin(), contactBook.end(), compareByName);
+}
+
