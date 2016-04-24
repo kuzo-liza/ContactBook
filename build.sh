@@ -26,14 +26,14 @@ build_debug_version() {
 	cloc --version
 	cloc --by-file --xml --out=../../Reports/cloc_result *
 	qmake --version
-	#qmake "QMAKE_CXXFLAGS+=-fprofile-arcs -ftest-coverage -fPIC -O0 -g --coverage" "LIBS+=-lgcov"
+	qmake "QMAKE_CXXFLAGS+=-fprofile-arcs -ftest-coverage -fPIC -O0 -g --coverage" "LIBS+=-lgcov"
 	if [ -e "Makefile" ]; then
 		make --version
 		make
 		#Test/tst_testcore -xml -o test_results || true
 		cppcheck --version
 		cppcheck --enable=all -v  --xml  * 2> ../../Reports/cppcheck_result
-		#gcovr --version
+		gcovr --version
 		#gcovr -r . --xml --exclude='tst*' -o  ../../Reports/gcovr_result
 		
 		#valgrind --version
