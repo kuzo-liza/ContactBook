@@ -4,4 +4,4 @@ SUBDIRS += \
     Engine \
     ConsoleApp \
     GuiApp \
-    ContactTest
+    TestContact
