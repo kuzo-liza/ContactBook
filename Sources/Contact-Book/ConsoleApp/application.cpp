@@ -17,7 +17,7 @@ void Application::runApp()
         switch (check){
 
         case 1:
-            showBook();
+            Application::showBook();
             break;
 
         case 2:

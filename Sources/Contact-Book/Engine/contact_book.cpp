@@ -43,8 +43,7 @@ void ContactBook::deleteContact(int num)
 int ContactBook::checkNumberOfContacts()
 {
     string line;
-    ifstream book ("contact.txt");
-
+    ifstream book ("contactbook.txt");
     if (book.is_open())
     {
         while (! book.eof() )
@@ -61,7 +60,7 @@ int ContactBook::checkNumberOfContacts()
 
 void ContactBook::fillInTheBook()
 {
-    fstream file("contact.txt");
+    fstream file("contactbook.txt");
 
     for (int i = 0; i < sizeOfBook; i++)
     {
