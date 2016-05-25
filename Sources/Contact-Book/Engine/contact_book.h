@@ -16,6 +16,7 @@ public:
     int checkNumberOfContacts();
     void deleteContact(int num);
     void searchByName(string name);
+    void searchBySurname(string surname);
     void createContact(string name, string surname, string number);
     void fillInTheBook();
     void sortContacts();

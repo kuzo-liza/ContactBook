@@ -16,6 +16,7 @@ public:
     void mainMenu();
     void showBook();
     void searchByName();
+    void searchBySurname();
     void newContact();
     void editContact(int num);
     void sortInGroups(int group);

@@ -11,7 +11,7 @@ ContactBook::ContactBook()
 void ContactBook::searchByName(string name)
 {
 
-    for (int i = 0; i < contactBook.size(); i++)
+    for (int i = 1; i < contactBook.size(); i++)
     {
         if (contactBook[i].name == name)
         {
@@ -20,6 +20,21 @@ void ContactBook::searchByName(string name)
             cout << contactBook[i].number << endl;
         }
         // else cout << "Wrong name. Try again" << endl;
+    }
+}
+
+void ContactBook::searchBySurname(string surname)
+{
+
+    for (int i = 1; i < contactBook.size(); i++)
+    {
+        if (contactBook[i].surname == surname)
+        {
+            cout << contactBook[i].name << " ";
+            cout << surname << " ";
+            cout << contactBook[i].number << endl;
+        }
+        // else cout << "Wrong surname. Try again" << endl;
     }
 }
 
@@ -51,7 +66,7 @@ int ContactBook::checkNumberOfContacts()
             getline (book,line);
             sizeOfBook++;
         }
-
+        sizeOfBook++;
         book.close();
     }
 
@@ -62,7 +77,7 @@ void ContactBook::fillInTheBook()
 {
     fstream file("contactbook.txt");
 
-    for (int i = 0; i < sizeOfBook; i++)
+    for (int i = 1; i < sizeOfBook; i++)
     {
         file >> contactBook[i].name;
         file >> contactBook[i].surname;
