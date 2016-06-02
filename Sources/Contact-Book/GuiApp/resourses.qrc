@@ -2,5 +2,6 @@
     <qresource prefix="/resourses">
         <file>images for GUI/background.jpg</file>
         <file>images for GUI/icon.png</file>
+        <file>images for GUI/scrollarea.jpg</file>
     </qresource>
 </RCC>

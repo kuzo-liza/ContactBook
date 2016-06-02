@@ -16,6 +16,7 @@ private Q_SLOTS:
 
     void testForContact();
     void testCreateContact();
+    void testForBookSize();
 };
 
 TestContactTest::TestContactTest()
@@ -48,6 +49,12 @@ void TestContactTest::testCreateContact()
     QCOMPARE(book.sizeOfBook, numberOfContacts+1);
 }
 
+void TestContactTest::testForBookSize()
+{
+    int size;
+    size = book.sizeOfBook;
+    QCOMPARE(size ,book.checkNumberOfContacts());
+}
 
 QTEST_APPLESS_MAIN(TestContactTest)
 

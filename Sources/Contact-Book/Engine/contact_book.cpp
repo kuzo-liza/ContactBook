@@ -3,36 +3,32 @@
 ContactBook::ContactBook()
 {
     sizeOfBook = 0;
-    checkNumberOfContacts();
+    checkSizeOfFile();
     contactBook.resize(sizeOfBook);
     fillInTheBook();
 }
 
-void ContactBook::searchByName(string name)
+Contact ContactBook::searchByName(string name)
 {
 
-    for (int i = 1; i < contactBook.size(); i++)
+    for (int i = 0; i < contactBook.size(); i++)
     {
         if (contactBook[i].name == name)
         {
-            cout << name << " ";
-            cout << contactBook[i].surname << " ";
-            cout << contactBook[i].number << endl;
+            return contactBook[i];
         }
         // else cout << "Wrong name. Try again" << endl;
     }
 }
 
-void ContactBook::searchBySurname(string surname)
+Contact ContactBook::searchBySurname(string surname)
 {
 
-    for (int i = 1; i < contactBook.size(); i++)
+    for (int i = 0; i < contactBook.size(); i++)
     {
         if (contactBook[i].surname == surname)
         {
-            cout << contactBook[i].name << " ";
-            cout << surname << " ";
-            cout << contactBook[i].number << endl;
+            return contactBook[i];
         }
         // else cout << "Wrong surname. Try again" << endl;
     }
@@ -55,7 +51,7 @@ void ContactBook::deleteContact(int num)
     sizeOfBook--;
 }
 
-int ContactBook::checkNumberOfContacts()
+int ContactBook::checkSizeOfFile()
 {
     string line;
     ifstream book ("contactbook.txt");
@@ -66,7 +62,6 @@ int ContactBook::checkNumberOfContacts()
             getline (book,line);
             sizeOfBook++;
         }
-        sizeOfBook++;
         book.close();
     }
 
@@ -77,12 +72,13 @@ void ContactBook::fillInTheBook()
 {
     fstream file("contactbook.txt");
 
-    for (int i = 1; i < sizeOfBook; i++)
+    for (int i = 0; i < sizeOfBook; i++)
     {
         file >> contactBook[i].name;
         file >> contactBook[i].surname;
         file >> contactBook[i].number;
     }
+    file.close();
 }
 
 bool ContactBook::compareByName(const Contact& contact1, const Contact& contact2)
@@ -99,3 +95,21 @@ void ContactBook::sortByName()
     //sort(contactBook.begin(), contactBook.end(), compareByName);
 }
 
+int ContactBook::checkNumberOfContacts()
+{
+    return contactBook.size();
+}
+
+void ContactBook::saveBook()
+{
+    fstream file;
+    file.open("contactbook.txt", std::ios::out | std::ios::in);
+    for (int i = 0; i < sizeOfBook; i++)
+    {
+        file << contactBook[i].name << " ";
+        file << contactBook[i].surname << " ";
+        file << contactBook[i].number;
+        file << endl;
+    }
+    file.close();
+}

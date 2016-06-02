@@ -71,9 +71,9 @@ void Application::mainMenu()
 
 void Application::showBook()
 {
-    for (int i = 1; i < book.sizeOfBook; i++)
+    for (int i = 0; i < book.sizeOfBook; i++)
     {
-        cout << i << " ";
+        cout << i+1 << " ";
         cout << book.contactBook[i].name << " ";
         cout << book.contactBook[i].surname << " ";
         cout << book.contactBook[i].number << endl;
@@ -89,9 +89,12 @@ void Application::searchByName()
     cin >> name;
     cout << endl;
 
-    book.searchByName(name);
+   Contact tmpContact = book.searchByName(name);
 
-    cout << endl;
+   cout << tmpContact.getName() << " ";
+   cout << tmpContact.getSurname() << " ";
+   cout << tmpContact.getNumber() << endl << endl;
+
 }
 
 void Application::searchBySurname()
@@ -103,9 +106,12 @@ void Application::searchBySurname()
 
     cout << endl;
 
-    book.searchBySurname(surname);
+    Contact tmpContact = book.searchBySurname(surname);
 
-    cout << endl;
+    cout << tmpContact.getName() << " ";
+    cout << tmpContact.getSurname() << " ";
+    cout << tmpContact.getNumber() << endl << endl;
+
 }
 
 
